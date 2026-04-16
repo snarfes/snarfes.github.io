@@ -1,0 +1,94 @@
+:root {
+  --blue: #3C86FF;
+  --hotpink: #E61660;
+  --lightpink: #F7C3DB;
+  --orange: #F47C20;
+  --black: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--black);
+  background: white;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.logo {
+  max-width: 180px;
+}
+
+.intro {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--hotpink);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.block h2 {
+  color: var(--blue);
+}
+
+.links {
+  padding: 20px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.instagram {
+  background: var(--hotpink);
+}
+
+.strava {
+  background: var(--orange);
+}
+
+.whatsapp {
+  background: var(--blue);
+  border: none;
+  cursor: pointer;
+}
+
+.gallery {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}

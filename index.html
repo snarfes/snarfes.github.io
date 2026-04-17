@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formosa Running Club</title>
-<!-- Favicon Icons -->
-<link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/8p3VWAe.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/KcpapUw.png">
-<link rel="icon" type="image/png" sizes="64x64" href="https://i.imgur.com/VhatMrX.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/O3TDuCe.png">
-
-<!-- Optional ICO fallback (upload flamingo.ico and add link) -->
-<!-- <link rel="icon" type="image/x-icon" href="https://YOUR_ICO_LINK_HERE.ico"> -->
-
 
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/8p3VWAe.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/KcpapUw.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="https://i.imgur.com/VhatMrX.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/O3TDuCe.png">
 </head>
 
 <body>
@@ -28,33 +25,45 @@
             <li><a href="#training">Training</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Connect</a></li>
+
+            <!-- Language Switcher -->
+            <li class="lang-switch">
+                <a href="#" onclick="setLanguage('pt')">PT</a> |
+                <a href="#" onclick="setLanguage('en')">EN</a>
+            </li>
         </ul>
     </nav>
 
-    <!-- HERO / LOGO SECTION -->
-   <header class="hero">
+    <!-- HERO SECTION -->
+    <header class="hero">
 
-    <div class="logo-wrapper animate-logo">
-        <img src="https://i.imgur.com/JAGr4Ic.jpg"
-             alt="Formosa Running Club Logo"
-             class="frc-logo-wide">
-    </div>
+        <div class="logo-wrapper animate-logo">
+            <img src="https://i.imgur.com/JAGr4Ic.jpg"
+                 alt="Formosa Running Club Logo"
+                 class="frc-logo-wide">
+        </div>
 
-    <p class="tagline animate-tagline">
-        A friendly and inclusive running community exploring Tavira.<br>
-        SHOW UP ANYWAY.
-    </p>
+        <!-- Tagline PT -->
+        <p class="tagline animate-tagline lang lang-pt">
+            Uma comunidade amigável e inclusiva a explorar Tavira a correr.<br>
+            APARECE NA MESMA.
+        </p>
 
-    <a href="#contact" class="btn animate-btn">Join Us</a>
-</header>
+        <!-- Tagline EN -->
+        <p class="tagline animate-tagline lang lang-en">
+            A friendly and inclusive running community exploring Tavira.<br>
+            SHOW UP ANYWAY.
+        </p>
 
+        <a href="#contact" class="btn animate-btn">Join Us</a>
+    </header>
 
-    <!-- About Section -->
+    <!-- ABOUT SECTION -->
     <section id="about">
         <h2>About Us</h2>
 
-        <div class="block">
-            <h2>🇵🇹 PT</h2>
+        <!-- Portuguese -->
+        <div class="lang lang-pt">
             <p>
                 Somos uma comunidade descontraída em Tavira que corre por gosto — não por competição.
                 Acreditamos no poder de um bom café, boas conversas e uns bons quilómetros juntos.
@@ -66,11 +75,11 @@
                 🎁 Corridas 100% gratuitas.
             </p>
             <p><strong>Traz um amigo. Ou vem sozinho e faz amigos.</strong></p>
-            <p><strong>Show up Anyway.</strong></p>
+            <p><strong>Appearça na mesma.</strong></p>
         </div>
 
-        <div class="block">
-            <h2>🇬🇧 EN</h2>
+        <!-- English -->
+        <div class="lang lang-en">
             <p>
                 We’re a young and easygoing community that runs for joy — not for competition.
                 We believe in the power of good coffee, good chats, and a few good kilometers together.
@@ -82,32 +91,52 @@
                 🎁 Runs are 100% free.
             </p>
             <p><strong>Bring a friend. Or come solo and make new ones.</strong></p>
-            <p><strong>Show up Anyway.</strong></p>
+            <p><strong>Show up anyway.</strong></p>
         </div>
     </section>
 
-    <!-- Training Section -->
+    <!-- TRAINING SECTION -->
     <section id="training">
         <h2>Training Schedule</h2>
-        <div class="training-grid">
+
+        <!-- PT -->
+        <div class="training-grid lang lang-pt">
+            <div class="training-box">
+                <h3>Todas as manhãs de sábado</h3>
+                <p>Encontramo-nos todos os sábados para uma corrida social seguida de café.</p>
+            </div>
+
+            <div class="training-box">
+                <h3>Durante a semana</h3>
+                <p>Organizamos corridas ao nascer ou pôr do sol, dependendo da época.</p>
+            </div>
+
+            <div class="training-box">
+                <h3>Eventos</h3>
+                <p>Participamos juntos em eventos organizados e corridas locais.</p>
+            </div>
+        </div>
+
+        <!-- EN -->
+        <div class="training-grid lang lang-en">
             <div class="training-box">
                 <h3>Every Saturday Morning</h3>
-                <p>We meet every Saturday morning (8am or 9am depending on the season) for a fun, social run, ending with coffee and many chats!</p>
+                <p>We meet every Saturday morning for a fun, social run ending with coffee and chats.</p>
             </div>
 
             <div class="training-box">
                 <h3>Mid-Week</h3>
-                <p>Some mid-weeks we organise sunrise or sunset runs, or meet at 8 or 9am.</p>
+                <p>Sometimes we organise sunrise or sunset runs, depending on the season.</p>
             </div>
 
             <div class="training-box">
                 <h3>Events</h3>
-                <p>We participate as a group in organised races and events.</p>
+                <p>We participate together in local races and organised events.</p>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- GALLERY SECTION -->
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery-grid">
@@ -117,29 +146,23 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT SECTION -->
     <section id="contact">
         <h2>Connect</h2>
 
         <p class="contact-item">
             <span class="icon email-icon"></span>
-            <a href="mailto:formosarunningclub@gmail.com">
-                formosarunningclub@gmail.com
-            </a>
+            <a href="mailto:formosarunningclub@gmail.com">formosarunningclub@gmail.com</a>
         </p>
 
         <p class="contact-item">
             <span class="icon insta-icon"></span>
-            <a href="https://instagram.com/formosarunningclub" target="_blank">
-                @formosarunningclub
-            </a>
+            <a href="https://instagram.com/formosarunningclub" target="_blank">@formosarunningclub</a>
         </p>
 
         <p class="contact-item">
             <span class="icon strava-icon"></span>
-            <a href="https://www.strava.com/clubs/formosarunningclub" target="_blank">
-                Strava Club Page
-            </a>
+            <a href="https://www.strava.com/clubs/formosarunningclub" target="_blank">Strava Club Page</a>
         </p>
 
         <p id="whatsapp-container" class="contact-item">

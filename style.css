@@ -11,20 +11,6 @@
     --bg-light: #ffffff;
 }
 
-<header class="hero">
-    <div class="logo-wrapper animate-logo">
-        <img src="https://i.imgur.com/JAGr4Ic.jpg"
-             alt="Formosa Running Club Logo"
-             class="frc-logo-wide">
-    </div>
-
-    <p class="tagline animate-tagline">
-        A friendly and inclusive running community exploring Tavira.<br>
-        SHOW UP ANYWAY.
-    </p>
-
-    <a href="#contact" class="btn animate-btn">Join Us</a>
-</header>
 
 
 /* Logo wrapper creates a seamless card */

@@ -13,7 +13,7 @@
 
 /* Logo wrapper creates a seamless card */
 .logo-wrapper {
-    background: white;              /* matches the logo background */
+    background: hotpink;              /* matches the logo background */
     padding: 10px;                  /* tight inner padding */
     border-radius: 12px;            /* soft edges */
     max-width: 900px;

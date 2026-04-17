@@ -11,13 +11,34 @@
     --bg-light: #ffffff;
 }
 
+/* Logo wrapper creates a seamless card */
+.logo-wrapper {
+    background: white;              /* matches the logo background */
+    padding: 10px;                  /* tight inner padding */
+    border-radius: 12px;            /* soft edges */
+    max-width: 900px;
+    margin: 0 auto 20px;            /* centered and spaced */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* subtle depth */
+}
+
+/* Logo image itself */
+.frc-logo-wide {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+
 /* HERO SECTION */
 .hero {
     background: var(--hotpink);
-    padding-top: 60px;   /* reduced from 120px */
-    padding-bottom: 20px; /* reduced from 60px */
+    padding-top: 80px;
+    padding-bottom: 30px;
     text-align: center;
 }
+
 
 
 /* Properly scale the logo without cropping */

@@ -44,3 +44,23 @@ function revealWhatsApp() {
     `;
 }
 
+function setLanguage(lang) {
+    // Save choice
+    localStorage.setItem("lang", lang);
+
+    // Hide all
+    document.querySelectorAll(".lang").forEach(el => {
+        el.classList.remove("active");
+    });
+
+    // Show selected
+    document.querySelectorAll(".lang-" + lang).forEach(el => {
+        el.classList.add("active");
+    });
+}
+
+// Load saved language (default EN)
+const savedLang = localStorage.getItem("lang") || "en";
+setLanguage(savedLang);
+
+

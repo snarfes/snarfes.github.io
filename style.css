@@ -14,8 +14,8 @@
 /* HERO SECTION */
 .hero {
     background: var(--hotpink);
-    padding-top: 120px;     /* space below the navbar */
-    padding-bottom: 60px;   /* room below the logo/tagline */
+    padding-top: 0px;     /* space below the navbar */
+    padding-bottom: 0px;   /* room below the logo/tagline */
     text-align: center;
 }
 

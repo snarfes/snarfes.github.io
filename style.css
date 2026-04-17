@@ -17,7 +17,7 @@
     max-height: 600px;      /* adjust height as needed */
     object-fit: cover;      /* makes it banner-like */
     object-position: center;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     border-radius: 0;       /* full width, no corners */
 }
 

@@ -11,15 +11,24 @@
     --bg-light: #ffffff;
 }
 
-/* Full-width hero logo */
-.frc-logo-wide {
-    width: 100%;
-    max-height: 600px;      /* adjust height as needed */
-    object-fit: cover;      /* makes it banner-like */
-    object-position: center;
-    margin-bottom: 0px;
-    border-radius: 0;       /* full width, no corners */
+/* HERO SECTION */
+.hero {
+    background: var(--hotpink);
+    padding-top: 120px;     /* space below the navbar */
+    padding-bottom: 60px;   /* room below the logo/tagline */
+    text-align: center;
 }
+
+/* Properly scale the logo without cropping */
+.frc-logo-wide {
+    display: block;
+    width: 100%;
+    max-width: 1200px;   /* adjust as needed */
+    height: auto;        /* ensures the full image shows */
+    margin: 0 auto 30px;
+    object-fit: contain; /* ensures full logo always visible */
+}
+
 
 /* Tagline styling */
 .tagline {

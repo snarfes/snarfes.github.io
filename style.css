@@ -1,142 +1,181 @@
+/* ----------------------------------
+   Formosa Running Club – Brand Theme
+------------------------------------- */
 
-        :root {
-            --blue: #3C86FF;
-            --hotpink: #E61660;
-            --lightpink: #F7C3DB;
-            --orange: #F47C20;
-            --black: #000000;
-            --bg-light: #ffffff;
-        }
+:root {
+    --blue: #3C86FF;
+    --hotpink: #E61660;
+    --lightpink: #F7C3DB;
+    --orange: #F47C20;
+    --black: #000000;
+    --bg-light: #ffffff;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: var(--black);
-            background-color: var(--bg-light);
-        }
+/* Base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--black);
+    background-color: var(--bg-light);
+    scroll-behavior: smooth;
+}
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--blue);
-            padding: 15px 0;
-            z-index: 1000;
-        }
+h1, h2, h3 {
+    font-weight: bold;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 0;
-            padding: 0;
-        }
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--blue);
+    padding: 15px 0;
+    z-index: 1000;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Hero Section */
-        .hero {
-            background: var(--hotpink);
-            padding: 140px 20px 120px;
-            text-align: center;
-            color: white;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        .hero h1 {
-            font-size: 60px;
-            margin-bottom: 10px;
-        }
+nav a:hover {
+    opacity: 0.75;
+}
 
-        .hero p {
-            font-size: 22px;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.5;
-        }
+/* Hero Section */
+.hero {
+    background: var(--hotpink);
+    padding: 140px 20px 120px;
+    text-align: center;
+    color: white;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 28px;
-            background: var(--orange);
-            color: white;
-            font-weight: bold;
-            border-radius: 6px;
-            text-decoration: none;
-        }
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
 
-        /* Section base */
-        section {
-            padding: 80px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.hero p {
+    font-size: 22px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
 
-        section h2 {
-            text-align: center;
-            color: var(--blue);
-            margin-bottom: 25px;
-            font-size: 36px;
-        }
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: var(--orange);
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+}
 
-        /* About */
-        #about p {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 18px;
-            line-height: 1.6;
-        }
+.btn:hover {
+    opacity: 0.85;
+}
 
-        /* Training section */
-        .training-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
+/* Sections */
+section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .training-box {
-            background: var(--lightpink);
-            padding: 25px;
-            border-radius: 8px;
-        }
+section h2 {
+    text-align: center;
+    color: var(--blue);
+    margin-bottom: 25px;
+    font-size: 36px;
+}
 
-        .training-box h3 {
-            color: var(--hotpink);
-            margin-bottom: 10px;
-        }
+/* About */
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
 
-        /* Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-        }
+/* Training grid */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
 
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 6px;
-        }
+.training-box {
+    background: var(--lightpink);
+    padding: 25px;
+    border-radius: 8px;
+    transition: transform 0.25s ease;
+}
 
-        /* Contact */
-        #contact p {
-            text-align: center;
-            font-size: 18px;
-            margin: 8px 0;
-        }
+.training-box:hover {
+    transform: translateY(-5px);
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: var(--blue);
-            color: white;
-        }
+.training-box h3 {
+    color: var(--hotpink);
+    margin-bottom: 10px;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Contact */
+#contact p {
+    text-align: center;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--blue);
+    color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+    nav ul {
+        gap: 18px;
+    }
+}

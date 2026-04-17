@@ -1,94 +1,142 @@
-:root {
-  --blue: #3C86FF;
-  --hotpink: #E61660;
-  --lightpink: #F7C3DB;
-  --orange: #F47C20;
-  --black: #000000;
-}
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--black);
-  background: white;
-}
+        :root {
+            --blue: #3C86FF;
+            --hotpink: #E61660;
+            --lightpink: #F7C3DB;
+            --orange: #F47C20;
+            --black: #000000;
+            --bg-light: #ffffff;
+        }
 
-header {
-  text-align: center;
-  padding: 30px 0;
-}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: var(--black);
+            background-color: var(--bg-light);
+        }
 
-.logo {
-  max-width: 180px;
-}
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--blue);
+            padding: 15px 0;
+            z-index: 1000;
+        }
 
-.intro {
-  text-align: center;
-  padding: 10px 20px;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
 
-.tagline {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--hotpink);
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
-}
+        /* Hero Section */
+        .hero {
+            background: var(--hotpink);
+            padding: 140px 20px 120px;
+            text-align: center;
+            color: white;
+        }
 
-.block h2 {
-  color: var(--blue);
-}
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
 
-.links {
-  padding: 20px;
-  text-align: center;
-}
+        .hero p {
+            font-size: 22px;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
 
-.button {
-  display: inline-block;
-  padding: 12px 22px;
-  margin: 10px;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 28px;
+            background: var(--orange);
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+        }
 
-.instagram {
-  background: var(--hotpink);
-}
+        /* Section base */
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-.strava {
-  background: var(--orange);
-}
+        section h2 {
+            text-align: center;
+            color: var(--blue);
+            margin-bottom: 25px;
+            font-size: 36px;
+        }
 
-.whatsapp {
-  background: var(--blue);
-  border: none;
-  cursor: pointer;
-}
+        /* About */
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+        }
 
-.gallery {
-  padding: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+        /* Training section */
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px;
-}
+        .training-box {
+            background: var(--lightpink);
+            padding: 25px;
+            border-radius: 8px;
+        }
 
-.grid img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
+        .training-box h3 {
+            color: var(--hotpink);
+            margin-bottom: 10px;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        /* Contact */
+        #contact p {
+            text-align: center;
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--blue);
+            color: white;
+        }

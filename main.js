@@ -59,8 +59,28 @@ function setLanguage(lang) {
     });
 }
 
+function setLanguage(lang) {
+    const allLangBlocks = document.querySelectorAll(".lang");
+
+    // Hide all languages with fade-out
+    allLangBlocks.forEach(el => {
+        el.classList.remove("active");
+    });
+
+    // Small delay to allow fade-out before fade-in
+    setTimeout(() => {
+        document.querySelectorAll(".lang-" + lang).forEach(el => {
+            el.classList.add("active");
+        });
+    }, 150);
+
+    // Save selection
+    localStorage.setItem("lang", lang);
+}
+
 // Load saved language (default EN)
 const savedLang = localStorage.getItem("lang") || "en";
 setLanguage(savedLang);
+
 
 

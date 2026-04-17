@@ -11,6 +11,13 @@
     --bg-light: #ffffff;
 }
 
+.lang {
+    display: none;
+}
+
+.lang.active {
+    display: block;
+}
 
 
 /* Logo wrapper creates a seamless card */

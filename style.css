@@ -11,6 +11,16 @@
     --bg-light: #ffffff;
 }
 
+.gallery-grid img {
+    width: 100%;
+    height: 350px;          /* choose the height you prefer */
+    object-fit: cover;      /* crop images evenly */
+    object-position: center;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+
 /* Base */
 body {
     margin: 0;

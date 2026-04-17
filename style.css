@@ -18,6 +18,12 @@
     display: none;
 }
 
+/* Fix training grid after language fade */
+.training-grid.lang.active {
+    display: grid !important;
+}
+
+
 .lang.active {
     display: block;
     opacity: 1;

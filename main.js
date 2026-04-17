@@ -25,3 +25,10 @@ document.querySelectorAll("section, .training-box, .gallery-grid img").forEach(e
     el.classList.add("hidden");
     observer.observe(el);
 });
+
+function revealWhatsApp() {
+    const encoded = "aHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9IaU9ZWFRCbzFIQUwxT0ZOaEF5bFNV";
+    const link = atob(encoded);
+    document.getElementById("whatsapp-container").innerHTML =
+        "<a href='" + link + "' target='_blank'>Join the WhatsApp group</a>";
+}

@@ -14,20 +14,23 @@
 /* HERO SECTION */
 .hero {
     background: var(--hotpink);
-    padding-top: 0px;     /* space below the navbar */
-    padding-bottom: 0px;   /* room below the logo/tagline */
+    padding-top: 60px;   /* reduced from 120px */
+    padding-bottom: 20px; /* reduced from 60px */
     text-align: center;
 }
+
 
 /* Properly scale the logo without cropping */
 .frc-logo-wide {
     display: block;
+    max-width: 900px;
     width: 100%;
-    max-width: 1200px;   /* adjust as needed */
-    height: auto;        /* ensures the full image shows */
-    margin: 0 auto 30px;
-    object-fit: contain; /* ensures full logo always visible */
+    height: auto;
+    margin: 0 auto 10px;  /* reduced space below */
+    object-fit: contain;
+    object-position: center;
 }
+
 
 
 /* Tagline styling */

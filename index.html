@@ -1,99 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formosa Running Club – Tavira</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formosa Running Club</title>
 
+</head>
 <body>
 
-<header>
-  <img 
-    src="https://i.imgur.com/pZimywu.jpg" 
-    alt="Formosa Running Club Logo" 
-    class="logo"
-  >
-</header>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<section class="intro">
-  <h1>Formosa Running Club</h1>
-  <p class="tagline">Show Up Anyway.</p>
-</section>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Formosa Running Club</h1>
+        <p>A friendly and inclusive running community exploring Taiwan one stride at a time.</p>
+        <a href="#contact" class="btn">Join Us</a>
+    </header>
 
-<section class="content">
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Formosa Running Club is a welcoming group of runners based in Taiwan. 
+            Whether you're a beginner or a seasoned athlete, we host weekly sessions 
+            including intervals, tempo runs, long runs, and trail adventures across Taipei 
+            and beyond. Our mission is to build fitness, friendship, and fun—together.
+        </p>
+    </section>
 
-  <div class="block">
-    <h2>🇵🇹 PT</h2>
-    <p>
-      Somos uma comunidade descontraída em Tavira que corre por gosto — não por competição.
-      Acreditamos no poder de um bom café, boas conversas e uns bons quilómetros juntos.
-    </p>
-    <p>
-      📍 Todos os sábados<br>
-      🏁 Partida: vários (mais info no grupo WhatsApp)<br>
-      ☕ Corrida social de 5km + café e convívio<br>
-      🎁 Corridas 100% gratuitas.
-    </p>
-    <p><strong>Traz um amigo. Ou vem sozinho e faz amigos.</strong></p>
-    <p><strong>Show up Anyway.</strong></p>
-  </div>
+    <!-- Training Section -->
+    <section id="training">
+        <h2>Training Schedule</h2>
+        <div class="training-grid">
+            <div class="training-box">
+                <h3>Tuesday – Interval Training</h3>
+                <p>Structured speed workouts suitable for all paces.</p>
+            </div>
 
-  <div class="block">
-    <h2>🇬🇧 EN</h2>
-    <p>
-      We’re a young and easygoing community that runs for joy — not for competition.
-      We believe in the power of good coffee, good chats, and a few good kilometers together.
-    </p>
-    <p>
-      📍 Every Saturday morning<br>
-      🏁 Starting point: Various, info in the group<br>
-      ☕ 5km social run + post-run coffee & hangout<br>
-      🎁 Runs are 100% free.
-    </p>
-    <p><strong>Bring a friend. Or come solo and make new ones.</strong></p>
-    <p><strong>Show up Anyway.</strong></p>
-  </div>
+            <div class="training-box">
+                <h3>Thursday – Tempo Run</h3>
+                <p>A steady-paced riverside run designed to build endurance.</p>
+            </div>
 
-</section>
+            <div class="training-box">
+                <h3>Weekend – Long Run / Hike</h3>
+                <p>Explore Taiwan's mountains, trails, and scenic routes.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="links">
-  <h2>Links</h2>
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="images/photo1.jpg" alt="Running photo 1">
+            <img src="images/photo2.jpg" alt="Running photo 2">
+            <img src="images/photo3.jpg" alt="Running photo 3">
+            <img src="images/photo4.jpg" alt="Running photo 4">
+        </div>
+    </section>
 
-  <a class="button instagram" href="https://www.instagram.com/formosarunningclub/" target="_blank">
-    Instagram
-  </a>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: formosarunningclub@gmail.com</p>
+        <p>Instagram: @formosarunningclub</p>
+    </section>
 
-  <a class="button strava" href="https://www.strava.com/clubs/1579506" target="_blank">
-    Strava
-  </a>
-
-  <button class="button whatsapp" onclick="revealWhatsApp()">
-    WhatsApp (tap to reveal)
-  </button>
-
-  <p id="whatsapp-container"></p>
-</section>
-
-<section class="gallery">
-  <h2>Gallery</h2>
-
-  <div class="grid">
-<img src="https://i.imgur.com/LPtj7vE.jpg" alt="">
-<img src="https://i.imgur.com/nVHDtrQ.jpg" alt="">
-<img src="https://i.imgur.com/tcOeyNU.jpg" alt="">
-  </div>
-</section>
-
-<script>
-  function revealWhatsApp() {
-    const encoded = "aHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9IaU9ZWFRCbzFIQUwxT0ZOaEF5bFNV";
-    const link = atob(encoded);
-    document.getElementById("whatsapp-container").innerHTML =
-      "<a href='" + link + "' target='_blank'>Join the WhatsApp group</a>";
-  }
-</script>
+    <footer>
+        © 2026 Formosa Running Club. All rights reserved.
+    </footer>
 
 </body>
 </html>

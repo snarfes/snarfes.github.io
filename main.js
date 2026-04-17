@@ -12,14 +12,22 @@ document.querySelectorAll("nav a").forEach(link => {
     });
 });
 
-// Fade-in animation on scroll
+// Fade-in animation on scroll (extended for logo + tagline)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
+            entry.target.classList.add("animate-show");
         }
     });
 });
+
+// Observe hero animations
+document.querySelectorAll(
+    ".animate-logo, .animate-tagline, .animate-btn, section, .training-box, .gallery-grid img"
+).forEach(el => {
+    observer.observe(el);
+});
+
 
 document.querySelectorAll("section, .training-box, .gallery-grid img").forEach(el => {
     el.classList.add("hidden");

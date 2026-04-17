@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling for nav links
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
@@ -12,7 +12,7 @@ document.querySelectorAll("nav a").forEach(link => {
     });
 });
 
-// Fade-in on scroll
+// Fade-in animation on scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

@@ -11,13 +11,18 @@
     --bg-light: #ffffff;
 }
 
+/* Fade transition for language switching */
 .lang {
+    opacity: 0;
+    transition: opacity 0.4s ease;
     display: none;
 }
 
 .lang.active {
     display: block;
+    opacity: 1;
 }
+
 
 
 /* Logo wrapper creates a seamless card */

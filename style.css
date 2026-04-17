@@ -305,3 +305,28 @@ footer {
         gap: 18px;
     }
 }
+
+/* Initial hidden state */
+.animate-logo,
+.animate-tagline,
+.animate-btn {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    transition: all 0.8s ease;
+}
+
+/* When revealed by JS */
+.animate-show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Slight delay staggering for nicer effect */
+.animate-tagline.animate-show {
+    transition-delay: 0.15s;
+}
+
+.animate-btn.animate-show {
+    transition-delay: 0.3s;
+}
+

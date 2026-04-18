@@ -246,20 +246,36 @@ section h2 {
     backdrop-filter: blur(3px);
 }
 
+/* Lightbox content sizing (new improved version) */
 #lightbox-content {
     position: relative;
     z-index: 3;
-    max-width: 95%;
-    max-height: 95%;
+    max-width: 80%;
+    max-height: 80%;
 }
 
-#lightbox-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* auto mode controlled in JS */
-    border-radius: 10px;
-    animation: zoomIn 0.25s ease;
+/* Desktop: prevent oversized images */
+@media (min-width: 900px) {
+    #lightbox-img {
+        max-width: 70vw;      /* no wider than 70% of the viewport */
+        max-height: 80vh;     /* no taller than 80% of the viewport */
+        object-fit: contain;
+        border-radius: 10px;
+        animation: zoomIn 0.25s ease;
+    }
 }
+
+/* Mobile + tablet: keep large but not overwhelming */
+@media (max-width: 900px) {
+    #lightbox-img {
+        max-width: 95vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 10px;
+        animation: zoomIn 0.25s ease;
+    }
+}
+
 
 /* Smooth zoom animation */
 @keyframes zoomIn {

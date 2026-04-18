@@ -1,19 +1,31 @@
-// Smooth scrolling for nav links
+/* ----------------------------------
+   Smooth Navigation Scroll
+------------------------------------- */
+
 document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const target = document.querySelector(e.target.getAttribute("href"));
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 70,
-                behavior: "smooth"
-            });
+    link.addEventListener("click", e => {
+        const href = e.target.getAttribute("href");
+
+        // Only intercept anchors (#about, #training, etc)
+        if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 70,
+                    behavior: "smooth"
+                });
+            }
         }
     });
 });
 
-// Fade-in animation on scroll (extended for logo + tagline)
-const observer = new IntersectionObserver((entries) => {
+
+/* ----------------------------------
+   Fade-in Animation on Scroll
+------------------------------------- */
+
+const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("animate-show");
@@ -21,7 +33,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-// Observe hero animations
+// Observe all animated targets
 document.querySelectorAll(
     ".animate-logo, .animate-tagline, .animate-btn, section, .training-box, .gallery-grid img"
 ).forEach(el => {
@@ -29,10 +41,9 @@ document.querySelectorAll(
 });
 
 
-document.querySelectorAll("section, .training-box, .gallery-grid img").forEach(el => {
-    el.classList.add("hidden");
-    observer.observe(el);
-});
+/* ----------------------------------
+   WhatsApp Reveal Button
+------------------------------------- */
 
 function revealWhatsApp() {
     const encoded = "aHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9IaU9ZWFRCbzFIQUwxT0ZOaEF5bFNV";
@@ -44,43 +55,30 @@ function revealWhatsApp() {
     `;
 }
 
-function setLanguage(lang) {
-    // Save choice
-    localStorage.setItem("lang", lang);
 
-    // Hide all
-    document.querySelectorAll(".lang").forEach(el => {
-        el.classList.remove("active");
-    });
-
-    // Show selected
-    document.querySelectorAll(".lang-" + lang).forEach(el => {
-        el.classList.add("active");
-    });
-}
+/* ----------------------------------
+   Bilingual Fade Switcher (PT <-> EN)
+------------------------------------- */
 
 function setLanguage(lang) {
     const allLangBlocks = document.querySelectorAll(".lang");
 
-    // Hide all languages with fade-out
+    // Fade out all languages
     allLangBlocks.forEach(el => {
         el.classList.remove("active");
     });
 
-    // Small delay to allow fade-out before fade-in
+    // Fade in selected language
     setTimeout(() => {
         document.querySelectorAll(".lang-" + lang).forEach(el => {
             el.classList.add("active");
         });
     }, 150);
 
-    // Save selection
+    // Save user choice
     localStorage.setItem("lang", lang);
 }
 
 // Load saved language (default EN)
 const savedLang = localStorage.getItem("lang") || "en";
 setLanguage(savedLang);
-
-
-

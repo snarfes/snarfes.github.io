@@ -33,7 +33,10 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-/* Navigation */
+/* ----------------------------------
+   Navigation
+------------------------------------- */
+
 nav {
     position: fixed;
     top: 0;
@@ -119,7 +122,7 @@ nav a:hover {
 }
 
 /* ----------------------------------
-   SECTIONS (tightened spacing)
+   SECTIONS (tight spacing)
 ------------------------------------- */
 
 section {
@@ -149,7 +152,7 @@ section h2 {
 }
 
 /* ----------------------------------
-   TRAINING SECTION
+   TRAINING
 ------------------------------------- */
 
 .training-grid {
@@ -181,12 +184,12 @@ section h2 {
 }
 
 /* ----------------------------------
-   GALLERY
+   GALLERY: 3-column (desktop)
 ------------------------------------- */
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Always 3 on desktop */
     gap: 15px;
     margin-top: 10px !important;
 }
@@ -198,10 +201,91 @@ section h2 {
     object-position: center;
     border-radius: 6px;
     transition: transform 0.2s ease;
+    cursor: zoom-in;
 }
 
 .gallery-grid img:hover {
     transform: scale(1.03);
+}
+
+/* Tablet = 2 columns */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile = 1 column */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------------------------------
+   LIGHTBOX (Instagram-style)
+------------------------------------- */
+
+#lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(3px);
+}
+
+#lightbox-content {
+    position: relative;
+    z-index: 3;
+    max-width: 95%;
+    max-height: 95%;
+}
+
+#lightbox-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* auto mode controlled in JS */
+    border-radius: 10px;
+    animation: zoomIn 0.25s ease;
+}
+
+/* Smooth zoom animation */
+@keyframes zoomIn {
+    0% { transform: scale(0.6); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* X close button */
+#lightbox-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: white;
+    color: black;
+    border: none;
+    font-size: 26px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#lightbox-close:hover {
+    background: var(--lightpink);
 }
 
 /* ----------------------------------
@@ -224,7 +308,7 @@ section h2 {
     background-size: cover;
 }
 
-/* Icons (SVG as data URI) */
+/* SVG icons (data URIs) */
 .email-icon {
     background-image: url("data:image/svg+xml,%3Csvg fill='black' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7l8-5H4l8 5zm0 2l-8-5v10h16V8l-8 5z'/%3E%3C/svg%3E");
 }
@@ -239,29 +323,6 @@ section h2 {
 
 .whatsapp-icon {
     background-image: url("data:image/svg+xml,%3Csvg fill='%2333cc33' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.1 7.1L4 29l7.2-2.1C13.2 28.5 14.6 29 16 29c6.6 0 12-5.4 12-12S22.6 3 16 3zm7 17.6c-.3.9-1.5 1.6-2.4 1.8-.6.1-1.4.2-2.3-.1-.5-.2-1.1-.3-1.9-.7-3.3-1.6-5.4-4.5-5.6-4.7-.2-.3-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.7-.4 1-.4h.7c.2 0 .5-.1.7.6.3.9 1 3 1.1 3.2.1.2.1.4 0 .6-.1.2-.2.4-.4.6l-.6.7c-.2.2-.4.4-.2.7.2.3.9 1.5 2.1 2.5 1.5 1.3 2.7 1.7 3 .1.3-.3.6-.4.8-.3.3.1 1.9.9 2.2 1.1.3.2.5.3.6.5.1.2.1.9-.2 1.8z'/%3E%3C/svg%3E");
-    animation: whatsapp-pop 0.4s ease forwards;
-    opacity: 0;
-}
-
-@keyframes whatsapp-pop {
-    0% { transform: scale(0.3); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-.whatsapp-button {
-    background: var(--hotpink);
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.whatsapp-button:hover {
-    background: var(--orange);
-    transform: translateY(-2px);
 }
 
 /* Footer */
@@ -271,7 +332,6 @@ footer {
     background: var(--blue);
     color: white;
 }
-
 
 /* ----------------------------------
    BILINGUAL FADE SYSTEM
@@ -314,11 +374,9 @@ footer {
 }
 
 /* ----------------------------------
-   MOBILE STYLES
+   MOBILE
 ------------------------------------- */
 
 @media (max-width: 768px) {
-    nav ul {
-        gap: 18px;
-    }
+    nav ul { gap: 18px; }
 }

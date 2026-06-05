@@ -72,30 +72,34 @@ nav a:hover {
 
 .hero {
     background: var(--hotpink);
-    padding-top: 60px;
-    padding-bottom: 10px;
+    /* padding-top matches nav height so banner sits flush below it */
+    padding-top: 54px; /* nav is ~54px tall (15px top + 15px bottom + ~24px line) */
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
     text-align: center;
     color: white;
 }
 
+/* Full-bleed logo wrapper — no card, no border, no max-width */
 .logo-wrapper {
-    background: white;
-    padding: 10px;
-    border-radius: 12px;
-    max-width: 900px;
-    margin: 0 auto 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    line-height: 0; /* kills whitespace gap below img */
 }
 
 .frc-logo-wide {
     width: 100%;
-    max-width: 900px;
+    max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 8px;
-    object-fit: contain;
-    object-position: center;
-    margin: 0 auto 10px;
+    border-radius: 0;
+    object-fit: cover;
+    margin: 0;
 }
 
 .tagline {
@@ -189,7 +193,7 @@ section h2 {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Always 3 on desktop */
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-top: 10px !important;
 }
@@ -208,14 +212,12 @@ section h2 {
     transform: scale(1.03);
 }
 
-/* Tablet = 2 columns */
 @media (max-width: 900px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile = 1 column */
 @media (max-width: 600px) {
     .gallery-grid {
         grid-template-columns: 1fr;
@@ -223,7 +225,7 @@ section h2 {
 }
 
 /* ----------------------------------
-   LIGHTBOX (Instagram-style)
+   LIGHTBOX
 ------------------------------------- */
 
 #lightbox {
@@ -246,7 +248,6 @@ section h2 {
     backdrop-filter: blur(3px);
 }
 
-/* Lightbox content sizing (new improved version) */
 #lightbox-content {
     position: relative;
     z-index: 3;
@@ -254,18 +255,16 @@ section h2 {
     max-height: 80%;
 }
 
-/* Desktop: prevent oversized images */
 @media (min-width: 900px) {
     #lightbox-img {
-        max-width: 70vw;      /* no wider than 70% of the viewport */
-        max-height: 80vh;     /* no taller than 80% of the viewport */
+        max-width: 70vw;
+        max-height: 80vh;
         object-fit: contain;
         border-radius: 10px;
         animation: zoomIn 0.25s ease;
     }
 }
 
-/* Mobile + tablet: keep large but not overwhelming */
 @media (max-width: 900px) {
     #lightbox-img {
         max-width: 95vw;
@@ -276,14 +275,11 @@ section h2 {
     }
 }
 
-
-/* Smooth zoom animation */
 @keyframes zoomIn {
     0% { transform: scale(0.6); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* X close button */
 #lightbox-close {
     position: absolute;
     top: -10px;
@@ -308,6 +304,10 @@ section h2 {
    CONTACT
 ------------------------------------- */
 
+.contact-subheader {
+    text-align: center;
+}
+
 .contact-item {
     font-size: 18px;
     display: flex;
@@ -324,7 +324,6 @@ section h2 {
     background-size: cover;
 }
 
-/* SVG icons (data URIs) */
 .email-icon {
     background-image: url("data:image/svg+xml,%3Csvg fill='black' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm8 7l8-5H4l8 5zm0 2l-8-5v10h16V8l-8 5z'/%3E%3C/svg%3E");
 }
@@ -395,4 +394,83 @@ footer {
 
 @media (max-width: 768px) {
     nav ul { gap: 18px; }
+}
+
+/* ----------------------------------
+   WHATSAPP HERO REVEAL
+------------------------------------- */
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 20px 40px;
+}
+
+.wa-reveal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.wa-reveal-btn:hover {
+    background: #1ebe5a;
+    transform: translateY(-2px);
+}
+
+.wa-reveal-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+#wa-link-display {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+#wa-link-display a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+}
+
+#wa-link-display a:hover {
+    background: #1ebe5a;
+    transform: translateY(-2px);
+}
+
+#wa-link-display svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }

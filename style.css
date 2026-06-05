@@ -409,10 +409,8 @@ footer {
 }
 
 .wa-reveal-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #25D366;
+    display: inline-block;
+    background: var(--blue);
     color: #fff;
     font-weight: 700;
     font-size: 1.1rem;
@@ -425,15 +423,8 @@ footer {
 }
 
 .wa-reveal-btn:hover {
-    background: #1ebe5a;
+    background: #2a6fe0;
     transform: translateY(-2px);
-}
-
-.wa-reveal-btn svg {
-    width: 22px;
-    height: 22px;
-    fill: #fff;
-    flex-shrink: 0;
 }
 
 #wa-link-display {

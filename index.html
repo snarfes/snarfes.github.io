@@ -66,10 +66,10 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#training">Training</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Connect</a></li>
             <li><a href="#mission">Mission</a></li>
+            <li><a href="#support">Support</a></li>
             <li class="lang-switch">
                 <a href="#" onclick="setLanguage('pt')">PT</a> |
                 <a href="#" onclick="setLanguage('en')">EN</a>
@@ -110,9 +110,10 @@
         </div>
     </header>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT + TRAINING (merged) -->
     <section id="about">
         <h2>About Us</h2>
+
         <!-- PT -->
         <div class="lang lang-pt">
             <p>Somos um grupo de corrida comunitário, gratuito e aberto, baseado em Tavira, Algarve. Encontramo-nos todos os sábados: locais, estrangeiros, trabalhadores, visitantes, e tudo o que há entre isso — e corremos juntos.</p>
@@ -120,6 +121,7 @@
             <p><strong>Sem quotas. Sem pré-requisitos. Aparece.</strong></p>
             <p><strong>SHOW UP ANYWAY.</strong></p>
         </div>
+
         <!-- EN -->
         <div class="lang lang-en">
             <p>We're a free, open community running group based in Tavira, Algarve. We meet every Saturday: locals, foreigners, workers, visitors, and everyone in between — and we run together.</p>
@@ -127,19 +129,14 @@
             <p><strong>No membership fee. No prerequisites. Just show up.</strong></p>
             <p><strong>SHOW UP ANYWAY.</strong></p>
         </div>
-    </section>
 
-    <!-- TRAINING SECTION -->
-    <section id="training">
-        <h2>Training Schedule</h2>
-
-        <!-- PT -->
+        <!-- Training grid PT -->
         <div class="training-grid lang lang-pt">
             <div class="training-box">
-    <h3>Todas as manhãs de sábado</h3>
-    <p>Corrida social de 5km pela cidade, seguida de café.</p>
-    <a href="#contact" class="training-join-btn">Junta-te à próxima corrida</a>
-</div>
+                <h3>Todas as manhãs de sábado</h3>
+                <p>Corrida social de 5km pela cidade, seguida de café.</p>
+                <a href="#contact" class="training-join-btn">Junta-te à próxima corrida</a>
+            </div>
             <div class="training-box">
                 <h3>Durante a semana</h3>
                 <p>Corridas ao nascer ou pôr do sol, dependendo da época.</p>
@@ -150,13 +147,13 @@
             </div>
         </div>
 
-        <!-- EN -->
+        <!-- Training grid EN -->
         <div class="training-grid lang lang-en">
             <div class="training-box">
-    <h3>Every Saturday Morning</h3>
-    <p>5km social run around Tavira, ending with coffee.</p>
-    <a href="#contact" class="training-join-btn">Join next time</a>
-</div>
+                <h3>Every Saturday Morning</h3>
+                <p>5km social run around Tavira, ending with coffee.</p>
+                <a href="#contact" class="training-join-btn">Join next time</a>
+            </div>
             <div class="training-box">
                 <h3>Mid-Week</h3>
                 <p>Sunrise or sunset runs depending on the season.</p>
@@ -181,39 +178,39 @@
         </div>
     </section>
 
-   <!-- CONTACT -->
-<section id="contact">
-    <h2>Connect</h2>
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Connect</h2>
 
-    <!-- PT -->
-    <p class="contact-subheader lang lang-pt">
-        Queres juntar-te à próxima corrida? Entra no nosso grupo de WhatsApp abaixo!
-    </p>
-    <!-- EN -->
-    <p class="contact-subheader lang lang-en">
-        Want to join the next run? Simply join our WhatsApp group below!
-    </p>
+        <!-- PT -->
+        <p class="contact-subheader lang lang-pt">
+            Queres juntar-te à próxima corrida? Entra no nosso grupo de WhatsApp abaixo!
+        </p>
+        <!-- EN -->
+        <p class="contact-subheader lang lang-en">
+            Want to join the next run? Simply join our WhatsApp group below!
+        </p>
 
-    <p class="contact-item">
-        <span class="icon email-icon"></span>
-        <a href="mailto:formosarunningclub@gmail.com">formosarunningclub@gmail.com</a>
-    </p>
-    <p class="contact-item">
-        <span class="icon insta-icon"></span>
-        <a href="https://instagram.com/formosarunningclub" target="_blank">@formosarunningclub</a>
-    </p>
-    <p class="contact-item">
-        <span class="icon strava-icon"></span>
-        <a href="https://www.strava.com/clubs/formosarunningclub" target="_blank">Strava Club Page</a>
-    </p>
-    <p id="whatsapp-container" class="contact-item">
-        <span class="icon whatsapp-icon"></span>
-        <button onclick="revealWhatsApp()" class="whatsapp-button">
-            Reveal WhatsApp Group
-        </button>
-    </p>
-</section>
-    
+        <p class="contact-item">
+            <span class="icon email-icon"></span>
+            <a href="mailto:formosarunningclub@gmail.com">formosarunningclub@gmail.com</a>
+        </p>
+        <p class="contact-item">
+            <span class="icon insta-icon"></span>
+            <a href="https://instagram.com/formosarunningclub" target="_blank">@formosarunningclub</a>
+        </p>
+        <p class="contact-item">
+            <span class="icon strava-icon"></span>
+            <a href="https://www.strava.com/clubs/formosarunningclub" target="_blank">Strava Club Page</a>
+        </p>
+        <p id="whatsapp-container" class="contact-item">
+            <span class="icon whatsapp-icon"></span>
+            <button onclick="revealWhatsApp()" class="whatsapp-button">
+                Reveal WhatsApp Group
+            </button>
+        </p>
+    </section>
+
     <!-- MISSION STATEMENT -->
     <section id="mission">
         <h2>Mission Statement</h2>
@@ -239,6 +236,27 @@
         </div>
     </section>
 
+    <!-- SUPPORT -->
+    <section id="support">
+        <h2>Support Us</h2>
+
+        <!-- PT -->
+        <div class="lang lang-pt">
+            <p>O FRC é sempre gratuito. Se queres apoiar o clube, podes contribuir através do Ko-fi — ajuda a cobrir custos de eventos, t-shirts e muito mais.</p>
+        </div>
+        <!-- EN -->
+        <div class="lang lang-en">
+            <p>FRC is always free. If you'd like to support the club, you can contribute via Ko-fi — it helps cover event costs, t-shirts, and more.</p>
+        </div>
+
+        <iframe id='kofiframe'
+            src='https://ko-fi.com/formosarunningclub/?hidefeed=true&widget=true&embed=true&preview=true'
+            style='border:none;width:100%;padding:4px;background:#f9f9f9;'
+            height='712'
+            title='formosarunningclub'>
+        </iframe>
+    </section>
+
     <footer>
         © 2026 Formosa Running Club. All rights reserved.
     </footer>
@@ -250,14 +268,16 @@
         }
     </script>
 
+    <!-- Ko-fi floating widget -->
     <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('formosarunningclub', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support Formosa Running Club 🦩',
-    'floating-chat.donateButton.background-color': '#ff38b8',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
+    <script>
+      kofiWidgetOverlay.draw('formosarunningclub', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support FRC 🦩',
+        'floating-chat.donateButton.background-color': '#ff38b8',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
+    </script>
+
 </body>
 </html>

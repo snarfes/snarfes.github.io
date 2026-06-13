@@ -95,7 +95,7 @@ document.querySelectorAll(".gallery-grid img").forEach(img => {
 ------------------------------------- */
 
 function revealWhatsApp() {
-    const encoded = "aHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9IaU9ZWFRCbzFIQUwxT0ZOaEF5bFNV";
+    const encoded = "aHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9IaU9ZWFRDbzFIQUwxT0ZOaEF5bFNV";
     const link = atob(encoded);
 
     document.getElementById("whatsapp-container").innerHTML = `

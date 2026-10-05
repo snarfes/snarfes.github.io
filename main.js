@@ -95,12 +95,12 @@ document.querySelectorAll(".gallery-grid img").forEach(img => {
 ------------------------------------- */
 
 function revealWhatsApp() {
-    const encoded = "aHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9IaU9ZWFRDbzFIQUwxT0ZOaEF5bFNV";
+    const encoded = "aHR0cHM6Ly9jaGF0LndoYXRzYXBwLmNvbS9DM2ltaTlCN2ttOUY3WHNtVGpQaG9J";
     const link = atob(encoded);
 
     document.getElementById("whatsapp-container").innerHTML = `
         <span class="icon whatsapp-icon animated"></span>
-        <a href="${link}" target="_blank">Join the WhatsApp Group</a>
+        <a href="${link}" target="_blank" rel="noopener">Join the WhatsApp Group</a>
     `;
 }
 
